@@ -31,6 +31,7 @@ class UserCreateView(CreateAPIView):
             
 
 class UserListView(ListCreateAPIView):
+
     queryset = User.objects.all().values('id', 'name', 'lastname', 'email')
     serializer_class = UserListSerializer
     def list(self, request):
@@ -42,3 +43,5 @@ class UserListView(ListCreateAPIView):
             return Response(response.success(serializer.data, 200, 'Lista de usuarios'))
         except Exception as err:
             return Response(response.serverError(err, 500, 'Algo salio mal'))
+        
+# class UserUpdateView():
