@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'backend_prueba.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'prueba_python',
-        'USER': 'vortex',
-        'PASSWORD': 'vortex.23',
-        'HOST': 'localhost',
-        'PORT': '5433',
+        'NAME': 'jjupanbw',
+        'USER': 'jjupanbw',
+        'PASSWORD': 'LLVwriipSX8Ot9y5d1fcm-K1N2d6RaK2',
+        'HOST': 'silly.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
 
