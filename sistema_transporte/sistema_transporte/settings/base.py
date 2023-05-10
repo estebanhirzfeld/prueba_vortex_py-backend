@@ -37,6 +37,7 @@ LOCAL_APPS = [
 #Librerias externas
 THIRD_APPS = [
     'rest_framework',
+    'corsheaders',
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS 
@@ -50,6 +51,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ORIGIN_ALLOW_ALL = True  # Permitir todos los orígenes
+
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',
 ]
 
 ROOT_URLCONF = 'sistema_transporte.urls'
