@@ -50,3 +50,18 @@ python3 manage.py createsuperuser
 se ingresan los datos que se solicita y se levanta el servidor para acceder al djando admin
 
 Por ultimo, las versiones de todas las herramientas utilizadas en el proyecto se encuentran en el archivo requirements.txt
+
+// pip freeze del entorno (env)
+python-decouple==3.8 🌟
+django-cors-headers==3.14.0 🌟
+asgiref==3.6.0
+Django==4.2
+djangorestframework==3.14.0
+psycopg2==2.9.6
+pytz==2023.3
+sqlparse==0.4.3
+tzdata==2023.3
+
+Se hizo uso de python-decouple para separar la configuración sensible de la aplicación, como claves secretas, credenciales de base de datos y otros parámetros específicos del entorno. Esto permite una mejor gestión y seguridad en la configuración.
+
+Se hizo uso de django-cors-headers para habilitar la funcionalidad de Cross-Origin Resource Sharing (CORS) en el proyecto Django. Esto permite que el proyecto acepte y restringa solicitudes HTTP de diferentes orígenes.
